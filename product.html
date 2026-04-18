@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product — SzekSonic</title>
+<meta name="description" content="SzekSonic counter-UAS platforms — modular, scalable, made in the EU.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="index.html" class="brand">SZEK<span>/</span>SONIC</a>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="product.html" class="active">Product</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="kicker reveal">// Product</div>
+    <h1 class="reveal d1">Defensive drones, <em>built for speed.</em></h1>
+    <p class="lede reveal d2">Our platforms are engineered to detect, track, and neutralize fast, low-cost aerial threats — at a fraction of the cost of legacy interceptors. Modular by design, sovereign by supply chain.</p>
+  </header>
+</div>
+
+<!-- ============= SCROLL-DRIVEN SEQUENCE ============= -->
+<div class="sequence" id="seq">
+  <div class="seq-stage">
+    <div class="seq-frames" id="seqFrames">
+      <img src="img/frame-01.webp" alt="Front view" class="active">
+      <img src="img/frame-02.webp" alt="Top quarter view">
+      <img src="img/frame-03.webp" alt="Top-down view">
+      <img src="img/frame-04.webp" alt="Side profile">
+      <img src="img/frame-05.webp" alt="Rear quarter view">
+      <img src="img/frame-06.webp" alt="Underside view">
+    </div>
+    <div class="seq-text" id="seqText">
+      <div class="step" id="seqStep">Frame 01 / 06</div>
+      <h3 id="seqTitle">A clean nose, head-on.</h3>
+      <p id="seqDesc">Low-drag forward profile and minimal frontal area — engineered for speed and a small radar signature when closing on target.</p>
+    </div>
+    <div class="seq-progress" id="seqProgress">
+      <span class="on"></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="seq-hint">Scroll to rotate ↓</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">// System overview</div>
+    <h2>One platform. Three pillars.</h2>
+    <div class="grid3">
+      <div class="cell"><div class="num">01 · Airframe</div><div><h3>High-speed interceptor</h3><p>Lightweight, agile airframe optimized for rapid response and high-G maneuvers in contested airspace.</p></div></div>
+      <div class="cell"><div class="num">02 · Autonomy</div><div><h3>Onboard intelligence</h3><p>Edge computing for target acquisition, tracking, and engagement under jamming and degraded comms.</p></div></div>
+      <div class="cell"><div class="num">03 · Command</div><div><h3>Operator console</h3><p>Lightweight ground software for mission planning, swarm coordination, and live telemetry.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">// Status</div>
+    <h2>Currently in active development.</h2>
+    <p>SzekSonic is a young company. Our first prototypes are in iterative testing in the Czech Republic. We work closely with end users and partners to refine the system against real operational requirements. Specifications and renders shown represent the current iteration and will evolve as the program matures.</p>
+    <p style="margin-top:32px"><a href="contact.html" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.15em">Request a briefing →</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>© <span id="y"></span> SzekSonic s.r.o.</div>
+    <div>Prague · Czech Republic</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+
+// === Scroll-driven sequence ===
+const captions = [
+  { title: "A clean nose, head-on.", desc: "Low-drag forward profile and minimal frontal area — engineered for speed and a small radar signature when closing on target." },
+  { title: "Wing planform from above.", desc: "Twin-boom tail and high-aspect wings provide range, stability, and the lift-to-drag ratio needed for sustained loiter." },
+  { title: "Top-down silhouette.", desc: "Compact footprint, designed for rapid deployment from light ground equipment without dedicated infrastructure." },
+  { title: "Side profile.", desc: "A purposeful, low fuselage. Form follows function — every surface is sized for the mission, nothing more." },
+  { title: "Rear quarter — propulsion.", desc: "Rear-mounted propulsion keeps the forward sensor field unobstructed and simplifies modular payload integration." },
+  { title: "Underside and payload bay.", desc: "Clean ventral surface with provisions for modular payloads, enabling rapid mission reconfiguration in the field." }
+];
+
+const seq = document.getElementById('seq');
+const frames = document.querySelectorAll('#seqFrames img');
+const dots = document.querySelectorAll('#seqProgress span');
+const titleEl = document.getElementById('seqTitle');
+const descEl = document.getElementById('seqDesc');
+const stepEl = document.getElementById('seqStep');
+let current = 0;
+
+function update(){
+  if(window.innerWidth < 781) return; // mobile: no scroll-binding
+  const rect = seq.getBoundingClientRect();
+  const total = seq.offsetHeight - window.innerHeight;
+  const progress = Math.max(0, Math.min(1, -rect.top / total));
+  const idx = Math.min(frames.length - 1, Math.floor(progress * frames.length));
+  if(idx !== current){
+    current = idx;
+    frames.forEach((f,i) => f.classList.toggle('active', i === idx));
+    dots.forEach((d,i) => d.classList.toggle('on', i <= idx));
+    titleEl.textContent = captions[idx].title;
+    descEl.textContent = captions[idx].desc;
+    stepEl.textContent = `Frame 0${idx+1} / 0${frames.length}`;
+  }
+}
+
+// On mobile, show all frames stacked vertically with their captions
+function setupMobile(){
+  if(window.innerWidth >= 781) return;
+  const stage = document.querySelector('.seq-stage');
+  const framesContainer = document.getElementById('seqFrames');
+  const textContainer = document.getElementById('seqText');
+  // already rendered first one; build stacked sections for the rest
+  if(stage.dataset.mobileBuilt) return;
+  stage.dataset.mobileBuilt = '1';
+  // For mobile we just show all frames sequentially with captions beneath each
+  framesContainer.innerHTML = '';
+  textContainer.style.display = 'none';
+  document.getElementById('seqProgress').style.display = 'none';
+  document.querySelector('.seq-hint').style.display = 'none';
+  captions.forEach((c, i) => {
+    const block = document.createElement('div');
+    block.style.cssText = 'padding:40px 28px;text-align:center';
+    block.innerHTML = `
+      <img src="img/frame-0${i+1}.webp" style="max-width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))" alt="">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.2em;margin:24px 0 12px">Frame 0${i+1} / 0${captions.length}</div>
+      <h3 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:24px;margin-bottom:12px">${c.title}</h3>
+      <p style="font-size:14px;line-height:1.6;color:#c5cdd3;max-width:46ch;margin:0 auto">${c.desc}</p>
+    `;
+    framesContainer.appendChild(block);
+  });
+}
+
+window.addEventListener('scroll', update, { passive: true });
+window.addEventListener('resize', () => { setupMobile(); update(); });
+setupMobile();
+update();
+</script>
+</body>
+</html>

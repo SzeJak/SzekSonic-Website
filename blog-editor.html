@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Post Editor — SzekSonic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d10;--ink:#e8eef2;--muted:#7a8893;--accent:#ff4d2e;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;font-weight:300;min-height:100vh}
+.top{padding:20px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.brand{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em}
+.brand span{color:var(--accent)}
+.tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.2em}
+.grid{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 61px)}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.pane{padding:40px 32px;overflow-y:auto}
+.pane.edit{border-right:1px solid var(--line)}
+.pane.preview{background:#11161b}
+label{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.2em;margin-bottom:10px;margin-top:24px}
+label:first-child{margin-top:0}
+input,textarea{width:100%;background:transparent;border:1px solid var(--line);color:var(--ink);padding:14px 16px;font-family:'IBM Plex Sans',sans-serif;font-size:15px;font-weight:300;transition:border-color .15s}
+input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+input#title{font-family:'Chakra Petch',sans-serif;font-size:20px;font-weight:600}
+textarea{resize:vertical;min-height:340px;line-height:1.6;font-family:'IBM Plex Sans',sans-serif}
+.hint{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
+.actions{margin-top:32px;display:flex;flex-direction:column;gap:10px}
+.btn{display:block;width:100%;padding:14px 20px;background:var(--accent);color:#0a0d10;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.2em;border:none;cursor:pointer;font-weight:500;transition:filter .15s}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+/* Preview rendering */
+.preview h1{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(26px,4vw,42px);line-height:1.05;letter-spacing:-.01em;margin-bottom:32px;color:var(--ink)}
+.preview .date{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.2em;margin-bottom:24px}
+.preview .body p{font-size:16px;line-height:1.7;color:#c5cdd3;margin-bottom:18px;max-width:65ch}
+.preview .body p:empty{display:none}
+.preview .eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.2em;margin-bottom:24px}
+.status{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);margin-top:12px;min-height:16px}
+.snippet{margin-top:16px;background:#0a0d10;border:1px solid var(--line);padding:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#c5cdd3;white-space:pre-wrap;word-break:break-all;line-height:1.5}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div>
+    <span class="brand">SZEK<span style="color:var(--accent)">/</span>SONIC</span>
+    <span class="tag" style="margin-left:16px">· Post Editor</span>
+  </div>
+  <div class="tag">Local tool · No data sent anywhere</div>
+</div>
+
+<div class="grid">
+  <!-- EDITOR -->
+  <div class="pane edit">
+    <label for="title">Title</label>
+    <input id="title" type="text" placeholder="First prototype flight" value="">
+
+    <label for="date">Date (dd.mm.yyyy)</label>
+    <input id="date" type="text" placeholder="16.04.2026">
+
+    <label for="slug">URL slug <span style="text-transform:none;letter-spacing:0;color:var(--muted)">(auto-filled, editable)</span></label>
+    <input id="slug" type="text" placeholder="first-prototype-flight">
+    <div class="hint">Filename will be <code id="filenameHint" style="color:var(--accent)">post.html</code> — goes inside the <code>news/</code> folder.</div>
+
+    <label for="content">Content</label>
+    <textarea id="content" placeholder="Write your post here.&#10;&#10;Separate paragraphs with a blank line.&#10;&#10;Keep it clear and direct — no markdown needed."></textarea>
+    <div class="hint">Each blank line starts a new paragraph. Plain text only.</div>
+
+    <div class="actions">
+      <button class="btn" onclick="downloadPost()">↓ Download post HTML</button>
+      <button class="btn ghost" onclick="copyListing()">⎘ Copy listing entry for news.html</button>
+    </div>
+    <div class="status" id="status"></div>
+    <div class="snippet" id="snippet" style="display:none"></div>
+  </div>
+
+  <!-- PREVIEW -->
+  <div class="pane preview">
+    <div class="eyebrow">// Live preview</div>
+    <div class="date" id="pvDate">—</div>
+    <h1 id="pvTitle">Your post title appears here</h1>
+    <div class="body" id="pvBody"><p style="color:var(--muted)">Your content will appear here as you type.</p></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const today = new Date();
+const pad = n => String(n).padStart(2,'0');
+$('date').value = `${pad(today.getDate())}.${pad(today.getMonth()+1)}.${today.getFullYear()}`;
+
+function slugify(s){
+  return s.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]+/g,'-')
+    .replace(/^-+|-+$/g,'')
+    .slice(0,60);
+}
+
+function updatePreview(){
+  const title = $('title').value.trim() || 'Your post title appears here';
+  const date = $('date').value.trim() || '—';
+  const content = $('content').value.trim();
+  $('pvTitle').textContent = title;
+  $('pvDate').textContent = date;
+  if(content){
+    const paragraphs = content.split(/\n\s*\n/).map(p => `<p>${escape(p.trim()).replace(/\n/g,'<br>')}</p>`).join('');
+    $('pvBody').innerHTML = paragraphs;
+  } else {
+    $('pvBody').innerHTML = '<p style="color:var(--muted)">Your content will appear here as you type.</p>';
+  }
+  const slug = $('slug').value.trim() || slugify($('title').value) || 'post';
+  $('filenameHint').textContent = slug + '.html';
+}
+
+function escape(s){
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+$('title').addEventListener('input', e => {
+  if(!$('slug').dataset.manual) $('slug').value = slugify(e.target.value);
+  updatePreview();
+});
+$('slug').addEventListener('input', e => { e.target.dataset.manual = '1'; updatePreview(); });
+$('date').addEventListener('input', updatePreview);
+$('content').addEventListener('input', updatePreview);
+
+function buildHTML(){
+  const title = $('title').value.trim() || 'Untitled';
+  const date = $('date').value.trim() || '';
+  const content = $('content').value.trim();
+  const paragraphs = content.split(/\n\s*\n/).map(p => `    <p>${escape(p.trim()).replace(/\n/g,'<br>')}</p>`).join('\n\n');
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${escape(title)} — SzekSonic</title>
+<meta name="description" content="${escape(title)} — SzekSonic news.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="../index.html" class="brand">SZEK<span>/</span>SONIC</a>
+    <div class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../product.html">Product</a>
+      <a href="../news.html" class="active">News</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <article class="post">
+    <div class="date">${escape(date)}</div>
+    <h1>${escape(title)}</h1>
+
+${paragraphs}
+
+    <a href="../news.html" class="back">← All news</a>
+  </article>
+</div>
+
+<footer>
+  <div class="wrap row">
+    <div>© <span id="y"></span> SzekSonic s.r.o.</div>
+    <div>Prague · Czech Republic</div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();<\/script>
+</body>
+</html>
+`;
+}
+
+function downloadPost(){
+  const slug = $('slug').value.trim() || slugify($('title').value) || 'post';
+  const blob = new Blob([buildHTML()], {type:'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = slug + '.html';
+  a.click();
+  $('status').textContent = `✓ Downloaded ${slug}.html — place it in your news/ folder`;
+}
+
+function copyListing(){
+  const title = $('title').value.trim() || 'Untitled';
+  const date = $('date').value.trim() || '';
+  const slug = $('slug').value.trim() || slugify(title) || 'post';
+  const listing = `      <a href="news/${slug}.html" class="post-row">
+        <div class="date">${escape(date)}</div>
+        <div class="ttl">${escape(title)}</div>
+        <div class="arrow">→</div>
+      </a>`;
+  navigator.clipboard.writeText(listing).then(() => {
+    $('status').textContent = '✓ Listing snippet copied — paste it at the top of the .posts block in news.html';
+    $('snippet').style.display = 'block';
+    $('snippet').textContent = listing;
+  }).catch(() => {
+    $('snippet').style.display = 'block';
+    $('snippet').textContent = listing;
+    $('status').textContent = 'Copy the snippet below manually:';
+  });
+}
+
+updatePreview();
+</script>
+</body>
+</html>
