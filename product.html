@@ -4,11 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Product — SzekSonic</title>
-<meta name="description" content="SzekSonic counter-UAS platforms — modular, scalable, made in the EU.">
+<meta name="description" content="INTERCEPTOR — jet-powered vertical-launch counter-UAS. 30 km in under 3 minutes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.perf-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:60px}
+@media(max-width:680px){.perf-strip{grid-template-columns:repeat(2,1fr)}}
+.perf-cell{background:var(--bg);padding:36px 28px}
+.perf-num{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(26px,3.5vw,44px);color:var(--accent);line-height:1;margin-bottom:8px;letter-spacing:-.02em}
+.perf-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.18em;line-height:1.5}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+@media(max-width:780px){.two-col{grid-template-columns:1fr;gap:48px}}
+.venn-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px}
+@media(max-width:860px){.venn-wrap{grid-template-columns:1fr}}
+.competitor-list{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line)}
+.competitor-row{background:var(--bg);padding:24px 28px;border-left:3px solid transparent;transition:border-color .2s}
+.competitor-row:hover{border-left-color:var(--accent)}
+.comp-name{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:15px;margin-bottom:8px}
+.comp-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.tag-good{font-family:'JetBrains Mono',monospace;font-size:9px;color:#4ecb71;text-transform:uppercase;letter-spacing:.12em}
+.tag-bad{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em}
+.comp-note{font-size:12px;color:var(--muted);line-height:1.5}
+.eu-block{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.02);padding:40px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start;margin-top:48px}
+@media(max-width:580px){.eu-block{grid-template-columns:1fr}}
+.eu-icon{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;border:1px solid rgba(255,77,46,.3);padding:10px 14px;white-space:nowrap}
+
+@keyframes rise{0%{transform:translateY(0);opacity:1}80%{transform:translateY(-88px);opacity:1}100%{transform:translateY(-88px);opacity:0}}
+@keyframes flame-pulse{0%,100%{opacity:.7;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.15)}}
+@keyframes ring-expand{0%{r:0;opacity:.8}100%{r:48;opacity:0}}
+.ac-rise{animation:rise 2.4s ease-in-out infinite}
+.flame-p{animation:flame-pulse .22s ease-in-out infinite;transform-origin:center top}
+.ring-exp{animation:ring-expand 1.8s ease-out infinite}
+.ring-exp2{animation:ring-expand 1.8s ease-out .6s infinite}
+.ring-exp3{animation:ring-expand 1.8s ease-out 1.2s infinite}
+</style>
 </head>
 <body>
 
@@ -25,52 +56,205 @@
   </nav>
 
   <header class="hero">
-    <div class="kicker reveal">// Product</div>
-    <h1 class="reveal d1">Defensive drones, <em>built for speed.</em></h1>
-    <p class="lede reveal d2">Our platforms are engineered to detect, track, and neutralize fast, low-cost aerial threats — at a fraction of the cost of legacy interceptors. Modular by design, sovereign by supply chain.</p>
+    <div class="kicker reveal">// INTERCEPTOR</div>
+    <h1 class="reveal d1">30 km. <em>Under 3 minutes.</em></h1>
+    <p class="lede reveal d2">A jet-powered, vertical-launch interceptor that reaches any point in its engagement envelope faster than any propeller-driven system — and reloads before the next threat arrives.</p>
   </header>
 </div>
 
-<!-- ============= SCROLL-DRIVEN SEQUENCE ============= -->
-<div class="sequence" id="seq">
-  <div class="seq-stage">
-    <div class="seq-frames" id="seqFrames">
-      <img src="img/frame-01.webp" alt="Front view" class="active">
-      <img src="img/frame-02.webp" alt="Top quarter view">
-      <img src="img/frame-03.webp" alt="Top-down view">
-      <img src="img/frame-04.webp" alt="Side profile">
-      <img src="img/frame-05.webp" alt="Rear quarter view">
-      <img src="img/frame-06.webp" alt="Underside view">
-    </div>
-    <div class="seq-text" id="seqText">
-      <div class="step" id="seqStep">Frame 01 / 06</div>
-      <h3 id="seqTitle">A clean nose, head-on.</h3>
-      <p id="seqDesc">Low-drag forward profile and minimal frontal area — engineered for speed and a small radar signature when closing on target.</p>
-    </div>
-    <div class="seq-progress" id="seqProgress">
-      <span class="on"></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <div class="seq-hint">Scroll to rotate ↓</div>
-  </div>
-</div>
-
-<section>
+<section style="padding-top:0;border-top:none">
   <div class="wrap">
-    <div class="eyebrow">// System overview</div>
-    <h2>One platform. Three pillars.</h2>
-    <div class="grid3">
-      <div class="cell"><div class="num">01 · Airframe</div><div><h3>High-speed interceptor</h3><p>Lightweight, agile airframe optimized for rapid response and high-G maneuvers in contested airspace.</p></div></div>
-      <div class="cell"><div class="num">02 · Autonomy</div><div><h3>Onboard intelligence</h3><p>Edge computing for target acquisition, tracking, and engagement under jamming and degraded comms.</p></div></div>
-      <div class="cell"><div class="num">03 · Command</div><div><h3>Operator console</h3><p>Lightweight ground software for mission planning, swarm coordination, and live telemetry.</p></div></div>
+    <div class="perf-strip">
+      <div class="perf-cell"><div class="perf-num">&gt;600</div><div class="perf-label">km/h<br>cruise speed</div></div>
+      <div class="perf-cell"><div class="perf-num">&lt;3 min</div><div class="perf-label">to cover<br>30 km</div></div>
+      <div class="perf-cell"><div class="perf-num">&lt;60 s</div><div class="perf-label">climb to<br>4 km alt</div></div>
+      <div class="perf-cell"><div class="perf-num">&gt;2</div><div class="perf-label">thrust-to-<br>weight ratio</div></div>
     </div>
   </div>
 </section>
 
+<!-- SCROLL SEQUENCE -->
+<div class="sequence" id="seq">
+  <div class="seq-stage">
+    <div class="seq-frames" id="seqFrames">
+      <img src="img/frame-01.webp" alt="Nose" class="active">
+      <img src="img/frame-02.webp" alt="Wing edge">
+      <img src="img/frame-03.webp" alt="X-tail">
+      <img src="img/frame-04.webp" alt="Aft">
+    </div>
+    <div class="seq-text" id="seqText">
+      <div class="step" id="seqStep">01 / 04</div>
+      <h3 id="seqTitle">Designed to close fast.</h3>
+      <p id="seqDesc">Low-drag forward profile — built to reach a threat at any bearing before it reaches its target.</p>
+    </div>
+    <div class="seq-progress" id="seqProgress">
+      <span class="on"></span><span></span><span></span><span></span>
+    </div>
+    <div class="seq-hint">Scroll to continue ↓</div>
+  </div>
+</div>
+
+<!-- VERTICAL LAUNCH -->
+<section>
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;filter:drop-shadow(0 20px 50px rgba(0,0,0,.5))">
+          <defs>
+            <linearGradient id="acBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2e3f52"/><stop offset="100%" stop-color="#1a2532"/>
+            </linearGradient>
+            <linearGradient id="flameG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff4d2e" stop-opacity="1"/>
+              <stop offset="60%" stop-color="#ff8c00" stop-opacity=".7"/>
+              <stop offset="100%" stop-color="#ffcc00" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="360" width="400" height="60" fill="rgba(255,255,255,.02)"/>
+          <line x1="0" y1="360" x2="400" y2="360" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <!-- VLS cells -->
+          <rect x="60" y="310" width="36" height="52" rx="3" fill="#1a2230" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+          <rect x="63" y="313" width="30" height="12" rx="2" fill="#243040"/>
+          <rect x="68" y="316" width="20" height="46" rx="2" fill="rgba(255,255,255,.05)"/>
+          <text x="78" y="378" fill="rgba(255,255,255,.2)" font-family="'JetBrains Mono',monospace" font-size="8" text-anchor="middle">VLS-1</text>
+
+          <rect x="182" y="310" width="36" height="52" rx="3" fill="#1e2a3a" stroke="rgba(255,77,46,.4)" stroke-width="1.5"/>
+          <rect x="185" y="313" width="30" height="12" rx="2" fill="#2a3d52"/>
+          <text x="200" y="378" fill="rgba(255,77,46,.6)" font-family="'JetBrains Mono',monospace" font-size="8" text-anchor="middle">ACTIVE</text>
+
+          <rect x="304" y="310" width="36" height="52" rx="3" fill="#1a2230" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+          <rect x="307" y="313" width="30" height="12" rx="2" fill="#243040"/>
+          <rect x="312" y="316" width="20" height="46" rx="2" fill="rgba(255,255,255,.05)"/>
+          <text x="322" y="378" fill="rgba(255,255,255,.2)" font-family="'JetBrains Mono',monospace" font-size="8" text-anchor="middle">VLS-3</text>
+
+          <!-- Rising aircraft -->
+          <g class="ac-rise">
+            <g class="flame-p">
+              <ellipse cx="200" cy="324" rx="8" ry="18" fill="url(#flameG)"/>
+              <ellipse cx="200" cy="320" rx="4" ry="10" fill="#ffcc00" opacity=".8"/>
+            </g>
+            <ellipse cx="200" cy="296" rx="10" ry="26" fill="url(#acBody)" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+            <ellipse cx="200" cy="270" rx="8" ry="10" fill="#243040" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+            <circle cx="200" cy="261" r="3" fill="#2e4258"/>
+            <path d="M200,294 L172,308 L183,294 L172,280 L200,294" fill="#243040" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+            <path d="M200,294 L228,308 L217,294 L228,280 L200,294" fill="#243040" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+            <path d="M200,314 L185,324 L193,314 L185,304 L200,314" fill="#1e2d3a" stroke="rgba(255,255,255,.08)" stroke-width=".8"/>
+            <path d="M200,314 L215,324 L207,314 L215,304 L200,314" fill="#1e2d3a" stroke="rgba(255,255,255,.08)" stroke-width=".8"/>
+          </g>
+
+          <!-- Blast rings -->
+          <circle cx="200" cy="360" r="0" fill="none" stroke="rgba(255,77,46,.4)" stroke-width="1.5" class="ring-exp"/>
+          <circle cx="200" cy="360" r="0" fill="none" stroke="rgba(255,140,0,.3)" stroke-width="1" class="ring-exp2"/>
+          <circle cx="200" cy="360" r="0" fill="none" stroke="rgba(255,200,0,.2)" stroke-width="1" class="ring-exp3"/>
+
+          <!-- Trajectories from standby cells -->
+          <path d="M78,310 Q78,200 160,90" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1.2" stroke-dasharray="6,5"/>
+          <path d="M322,310 Q322,200 240,90" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1.2" stroke-dasharray="6,5"/>
+
+          <!-- Target -->
+          <circle cx="200" cy="65" r="18" fill="none" stroke="rgba(255,77,46,.5)" stroke-width="1.5"/>
+          <circle cx="200" cy="65" r="10" fill="none" stroke="rgba(255,77,46,.3)" stroke-width="1"/>
+          <circle cx="200" cy="65" r="3" fill="rgba(255,77,46,.6)"/>
+          <text x="200" y="46" fill="rgba(255,77,46,.5)" font-family="'JetBrains Mono',monospace" font-size="8" text-anchor="middle">TARGET</text>
+
+          <text x="246" y="230" fill="rgba(255,255,255,.35)" font-family="'JetBrains Mono',monospace" font-size="8">&gt;600 km/h</text>
+          <text x="200" y="400" fill="rgba(255,255,255,.15)" font-family="'JetBrains Mono',monospace" font-size="7" text-anchor="middle" letter-spacing=".1em">SIMULTANEOUS SORTIES — NO RUNWAY</text>
+        </svg>
+      </div>
+
+      <div>
+        <div class="eyebrow">// Launch system</div>
+        <h2>Vertical launch. Any direction, simultaneously.</h2>
+        <p>INTERCEPTOR launches vertically from a fixed or vehicle-mounted cell. No runway, no pre-alignment toward the threat. The moment a target is detected, any cell in the battery fires independently.</p>
+        <p style="margin-top:18px">Multiple threats simultaneously? Multiple cells fire simultaneously. Each interceptor climbs to 4 km altitude in under 60 seconds, accelerating through 600 km/h — while remaining cells are already on standby for the next wave.</p>
+        <p style="margin-top:18px">Reaction time is measured in seconds. Capacity scales with number of cells. No single launch rail. No single point of failure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENN -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">// Where no other system reaches</div>
+    <h2>The gap every competitor leaves open.</h2>
+    <div class="venn-wrap">
+      <div>
+        <svg viewBox="0 0 420 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px">
+          <defs>
+            <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <circle cx="165" cy="155" r="110" fill="rgba(180,30,30,.18)" stroke="rgba(220,60,60,.5)" stroke-width="1.5"/>
+          <circle cx="280" cy="155" r="110" fill="rgba(30,100,80,.18)" stroke="rgba(40,160,120,.5)" stroke-width="1.5"/>
+          <circle cx="220" cy="260" r="110" fill="rgba(30,60,160,.18)" stroke="rgba(60,100,220,.5)" stroke-width="1.5"/>
+
+          <text x="95"  y="68" fill="rgba(220,90,90,.9)"  font-family="'Chakra Petch',sans-serif" font-weight="600" font-size="11" text-anchor="middle">SPEED CAPABLE</text>
+          <text x="95"  y="82" fill="rgba(200,200,200,.35)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">&gt;400 km/h OWA-UAS</text>
+          <text x="348" y="68" fill="rgba(60,180,130,.9)"  font-family="'Chakra Petch',sans-serif" font-weight="600" font-size="11" text-anchor="middle">COST POSITIVE</text>
+          <text x="348" y="82" fill="rgba(200,200,200,.35)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">&lt;€50k / kill</text>
+          <text x="220" y="396" fill="rgba(80,130,220,.9)" font-family="'Chakra Petch',sans-serif" font-weight="600" font-size="11" text-anchor="middle">BEYOND LINE OF SIGHT</text>
+          <text x="220" y="408" fill="rgba(200,200,200,.35)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">autonomous — no ground track</text>
+
+          <text x="165" y="172" fill="rgba(255,255,255,.32)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">APKWS /</text>
+          <text x="165" y="184" fill="rgba(255,255,255,.32)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">Dronehammer</text>
+          <text x="165" y="196" fill="rgba(255,255,255,.18)" font-family="'JetBrains Mono',monospace" font-size="7" text-anchor="middle">short range</text>
+
+          <text x="278" y="172" fill="rgba(255,255,255,.32)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">Multicopter</text>
+          <text x="278" y="184" fill="rgba(255,255,255,.32)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">interceptors</text>
+          <text x="278" y="196" fill="rgba(255,255,255,.18)" font-family="'JetBrains Mono',monospace" font-size="7" text-anchor="middle">prop-speed only</text>
+
+          <text x="155" y="278" fill="rgba(255,255,255,.32)" font-family="'IBM Plex Sans',sans-serif" font-size="9" text-anchor="middle">SAM / SHORAD</text>
+          <text x="155" y="290" fill="rgba(255,255,255,.18)" font-family="'JetBrains Mono',monospace" font-size="7" text-anchor="middle">€500k+ per round</text>
+
+          <circle cx="222" cy="210" r="36" fill="rgba(255,77,46,.14)" stroke="rgba(255,77,46,.7)" stroke-width="1.5" filter="url(#glow)"/>
+          <text x="222" y="205" fill="#ff4d2e" font-family="'Chakra Petch',sans-serif" font-weight="700" font-size="11" text-anchor="middle">OUR</text>
+          <text x="222" y="220" fill="#ff4d2e" font-family="'Chakra Petch',sans-serif" font-weight="700" font-size="11" text-anchor="middle">ANSWER</text>
+        </svg>
+      </div>
+
+      <div class="competitor-list">
+        <div class="competitor-row">
+          <div class="comp-name">APKWS / Dronehammer</div>
+          <div class="comp-tags"><span class="tag-good">✓ High speed</span><span class="tag-bad">✗ Short range</span><span class="tag-bad">✗ Needs ground guidance</span></div>
+          <div class="comp-note">Capable against jet-speed threats but limited to short ranges. Loses effectiveness beyond line-of-sight of the firing unit.</div>
+        </div>
+        <div class="competitor-row">
+          <div class="comp-name">Multicopter interceptors</div>
+          <div class="comp-tags"><span class="tag-good">✓ Low cost</span><span class="tag-good">✓ Autonomous</span><span class="tag-bad">✗ Prop-speed ceiling</span></div>
+          <div class="comp-note">Effective against FPV and slow UAS. Cannot engage Shahed-238 class jet-powered threats — speed is a hard physical limit.</div>
+        </div>
+        <div class="competitor-row">
+          <div class="comp-name">Conventional SAM / SHORAD</div>
+          <div class="comp-tags"><span class="tag-good">✓ High speed</span><span class="tag-good">✓ Long range</span><span class="tag-bad">✗ €500k–2M per round</span></div>
+          <div class="comp-note">Technically capable but economically unsustainable against mass-produced threats. A losing cost exchange at scale.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EU INTEGRATION -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">// Technology roadmap</div>
+    <h2>Built for European components — by design.</h2>
+    <p>INTERCEPTOR is being developed to integrate EU-made micro turbojet engines and European avionics stacks as they mature. The architecture absorbs sovereign alternatives without redesign — supply chain sovereignty is an operational requirement, not a marketing position.</p>
+    <div class="eu-block">
+      <div class="eu-icon">EU<br>TECH</div>
+      <div>
+        <h3 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:18px;margin-bottom:12px">Integration targets</h3>
+        <p style="font-size:14px;max-width:none;color:#c5cdd3">Micro turbojet engines from EU-based manufacturers &nbsp;·&nbsp; EU-sovereign flight control and avionics hardware &nbsp;·&nbsp; European datalink and encryption stacks compliant with NATO standards</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS -->
 <section>
   <div class="wrap">
     <div class="eyebrow">// Status</div>
     <h2>Currently in active development.</h2>
-    <p>SzekSonic is a young company. Our first prototypes are in iterative testing in the Czech Republic. We work closely with end users and partners to refine the system against real operational requirements. Specifications and renders shown represent the current iteration and will evolve as the program matures.</p>
+    <p>First prototypes are in iterative testing. Performance figures represent current design targets and will be validated through flight testing. We work directly with end users to ensure the system is tuned to real operational requirements, not laboratory conditions.</p>
     <p style="margin-top:32px"><a href="contact.html" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.15em">Request a briefing →</a></p>
   </div>
 </section>
@@ -83,73 +267,56 @@
 </footer>
 
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
-
-// === Scroll-driven sequence ===
+document.getElementById('y').textContent = new Date().getFullYear();
 const captions = [
-  { title: "A clean nose, head-on.", desc: "Low-drag forward profile and minimal frontal area — engineered for speed and a small radar signature when closing on target." },
-  { title: "Wing planform from above.", desc: "Twin-boom tail and high-aspect wings provide range, stability, and the lift-to-drag ratio needed for sustained loiter." },
-  { title: "Top-down silhouette.", desc: "Compact footprint, designed for rapid deployment from light ground equipment without dedicated infrastructure." },
-  { title: "Side profile.", desc: "A purposeful, low fuselage. Form follows function — every surface is sized for the mission, nothing more." },
-  { title: "Rear quarter — propulsion.", desc: "Rear-mounted propulsion keeps the forward sensor field unobstructed and simplifies modular payload integration." },
-  { title: "Underside and payload bay.", desc: "Clean ventral surface with provisions for modular payloads, enabling rapid mission reconfiguration in the field." }
+  { title: "Designed to close fast.", desc: "Low-drag forward profile — built to reach a threat at any bearing before it reaches its target." },
+  { title: "Wing planform for speed.", desc: "Geometry optimised for the intercept mission — enough span for maneuver energy, swept for high subsonic cruise." },
+  { title: "X-tail authority.", desc: "Cruciform tail delivers control in all axes — critical for the aggressive intercept maneuvers the mission demands." },
+  { title: "Aft section.", desc: "Clean rear geometry with provisions for modular payload integration and rapid mission reconfiguration." }
 ];
-
 const seq = document.getElementById('seq');
 const frames = document.querySelectorAll('#seqFrames img');
-const dots = document.querySelectorAll('#seqProgress span');
+const dots   = document.querySelectorAll('#seqProgress span');
 const titleEl = document.getElementById('seqTitle');
-const descEl = document.getElementById('seqDesc');
-const stepEl = document.getElementById('seqStep');
+const descEl  = document.getElementById('seqDesc');
+const stepEl  = document.getElementById('seqStep');
 let current = 0;
-
 function update(){
-  if(window.innerWidth < 781) return; // mobile: no scroll-binding
+  if(window.innerWidth < 781) return;
   const rect = seq.getBoundingClientRect();
-  const total = seq.offsetHeight - window.innerHeight;
-  const progress = Math.max(0, Math.min(1, -rect.top / total));
-  const idx = Math.min(frames.length - 1, Math.floor(progress * frames.length));
+  const scrollable = seq.offsetHeight - window.innerHeight;
+  if(scrollable <= 0) return;
+  const progress = Math.max(0, Math.min(1, -rect.top / scrollable));
+  const idx = Math.min(frames.length-1, Math.floor(progress * frames.length));
   if(idx !== current){
     current = idx;
-    frames.forEach((f,i) => f.classList.toggle('active', i === idx));
-    dots.forEach((d,i) => d.classList.toggle('on', i <= idx));
+    frames.forEach((f,i) => f.classList.toggle('active', i===idx));
+    dots.forEach((d,i)   => d.classList.toggle('on', i<=idx));
     titleEl.textContent = captions[idx].title;
-    descEl.textContent = captions[idx].desc;
-    stepEl.textContent = `Frame 0${idx+1} / 0${frames.length}`;
+    descEl.textContent  = captions[idx].desc;
+    stepEl.textContent  = `0${idx+1} / 0${frames.length}`;
   }
 }
-
-// On mobile, show all frames stacked vertically with their captions
 function setupMobile(){
   if(window.innerWidth >= 781) return;
   const stage = document.querySelector('.seq-stage');
-  const framesContainer = document.getElementById('seqFrames');
-  const textContainer = document.getElementById('seqText');
-  // already rendered first one; build stacked sections for the rest
   if(stage.dataset.mobileBuilt) return;
   stage.dataset.mobileBuilt = '1';
-  // For mobile we just show all frames sequentially with captions beneath each
-  framesContainer.innerHTML = '';
-  textContainer.style.display = 'none';
-  document.getElementById('seqProgress').style.display = 'none';
-  document.querySelector('.seq-hint').style.display = 'none';
-  captions.forEach((c, i) => {
-    const block = document.createElement('div');
-    block.style.cssText = 'padding:40px 28px;text-align:center';
-    block.innerHTML = `
-      <img src="img/frame-0${i+1}.webp" style="max-width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))" alt="">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.2em;margin:24px 0 12px">Frame 0${i+1} / 0${captions.length}</div>
-      <h3 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:24px;margin-bottom:12px">${c.title}</h3>
-      <p style="font-size:14px;line-height:1.6;color:#c5cdd3;max-width:46ch;margin:0 auto">${c.desc}</p>
-    `;
-    framesContainer.appendChild(block);
+  const fc = document.getElementById('seqFrames');
+  document.getElementById('seqText').style.display='none';
+  document.getElementById('seqProgress').style.display='none';
+  document.querySelector('.seq-hint').style.display='none';
+  fc.innerHTML='';
+  captions.forEach((c,i)=>{
+    const b=document.createElement('div');
+    b.style.cssText='padding:40px 28px;text-align:center';
+    b.innerHTML=`<img src="img/frame-0${i+1}.webp" style="max-width:100%;height:auto" alt=""><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.2em;margin:24px 0 12px">0${i+1} / 0${captions.length}</div><h3 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:22px;margin-bottom:10px">${c.title}</h3><p style="font-size:14px;line-height:1.6;color:#c5cdd3;max-width:46ch;margin:0 auto">${c.desc}</p>`;
+    fc.appendChild(b);
   });
 }
-
-window.addEventListener('scroll', update, { passive: true });
-window.addEventListener('resize', () => { setupMobile(); update(); });
-setupMobile();
-update();
+window.addEventListener('scroll', update, {passive:true});
+window.addEventListener('resize', ()=>{setupMobile();update();});
+setupMobile(); update();
 </script>
 </body>
 </html>
