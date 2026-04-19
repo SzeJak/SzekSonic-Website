@@ -8,32 +8,40 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="wrap">
-  <nav>
-    <a href="index.html" class="brand">SZEK<span>/</span>SONIC</a>
-    <div class="menu">
-      <a href="index.html" class="active">Home</a>
-      <a href="product.html">Product</a>
-      <a href="news.html">News</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</div>
-
 <div class="hero-image">
-  <div class="bg" style="background-image:url('img/hero.webp')"></div>
+  <div class="bg" style="background-image:url('img/frame-01.webp');background-size:320%;background-position:64% 20%;filter:contrast(1.12) brightness(.38) grayscale(.1)"></div>
   <div class="content">
+    <div class="wrap">
+      <nav>
+        <a href="index.html" class="brand">SZEK<span>/</span>SONIC</a>
+        <div class="menu">
+          <a href="index.html" class="active">Home</a>
+          <a href="product.html">Product</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
     <div class="wrap">
       <div class="kicker reveal">Counter-UAS · Unmanned Systems</div>
       <h1 class="reveal d1">Fast threats require <em>even faster</em> solutions.</h1>
       <p class="lede reveal d2">SzekSonic explores and delivers scalable unmanned solutions that give defenders the speed, precision, and adaptability they need against fast, low-cost, and hard-to-engage threats. Designed and built in the European Union.</p>
     </div>
   </div>
+</div>
+
+<!-- DETAIL IMAGES -->
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)">
+  <div style="height:200px;overflow:hidden;background:#0a0d10"><img src="img/01_02_External_Surface_2026-Apr-18_07-11-34PM-000_CustomizedView26184201130.png" alt="INTERCEPTOR forward fuselage detail" style="width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.06) brightness(.82)"></div>
+  <div style="height:200px;overflow:hidden;background:#0a0d10"><img src="img/01_02_External_Surface_2026-Apr-18_07-06-59PM-000_CustomizedView23876416273.png" alt="INTERCEPTOR X-tail cross-section detail" style="width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.06) brightness(.82)"></div>
+  <div style="height:200px;overflow:hidden;background:#0a0d10"><img src="img/01_02_External_Surface_2026-Apr-18_07-11-19PM-000_CustomizedView22945040550.png" alt="INTERCEPTOR wing root detail" style="width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.06) brightness(.82)"></div>
+  <div style="height:200px;overflow:hidden;background:#0a0d10"><img src="img/01_02_External_Surface_2026-Apr-18_07-10-47PM-000_CustomizedView18940827650.png" alt="INTERCEPTOR nose tip detail" style="width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.06) brightness(.82)"></div>
 </div>
 
 <section>
@@ -83,7 +91,7 @@
 <footer>
   <div class="wrap row">
     <div>© <span id="y"></span> SzekSonic s.r.o.</div>
-    <div>Prague · Czech Republic</div>
+    <div>Czech Republic</div>
   </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
