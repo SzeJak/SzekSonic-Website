@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">
+  <defs>
+    <filter id="forge" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016 0.042" numOctaves="4" seed="11" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.30  0 0 0 0 0.32  0 0 0 0 0.36  1.6 1.6 1.6 0 -1.9"/>
+      <feComponentTransfer><feFuncA type="discrete" tableValues="0 0 0.12 0.3 0.55 0.75"/></feComponentTransfer>
+    </filter>
+    <filter id="forge2" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.014" numOctaves="4" seed="37" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.20  0 0 0 0 0.22  0 0 0 0 0.26  1.5 1.5 1.5 0 -1.8"/>
+      <feComponentTransfer><feFuncA type="discrete" tableValues="0 0 0.15 0.35 0.6"/></feComponentTransfer>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.5  0 0 0 0 0.52  0 0 0 0 0.55  0.4 0.4 0.4 0 -0.45"/>
+    </filter>
+  </defs>
+  <rect width="600" height="600" fill="#0d1013"/>
+  <rect width="600" height="600" filter="url(#forge)"/>
+  <rect width="600" height="600" filter="url(#forge2)" opacity="0.9"/>
+  <rect width="600" height="600" filter="url(#grain)" opacity="0.25"/>
+</svg>
