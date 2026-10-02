@@ -32,6 +32,17 @@
   </div>
 </header>
 
+<!--
+  EDITING A PIECE
+  · Pictures: put an <img src="img/....jpg" alt="..."> inside .plate (main photo)
+    and inside each .thumb, replacing the <div class="forged"></div> placeholder.
+    Clicking a thumbnail swaps it into the main plate automatically.
+  · Price: put the real price in <span class="price"> (e.g. 129 €).
+  · Status: set the class on <span class="status"> to one of
+    "status soon" (Coming soon) / "status available" (Available to order) /
+    "status sold" (Sold out) and match the text.
+-->
+
 <main id="pieces">
   <div class="wrap">
     <div class="section-head reveal">
@@ -40,32 +51,65 @@
     </div>
 
     <article class="piece">
-      <div class="plate"><div class="forged"></div><span class="tag">Render coming soon</span></div>
+      <div class="gallery">
+        <div class="plate"><div class="forged"></div><span class="tag">Photos coming soon</span></div>
+        <div class="thumbs">
+          <button class="thumb active" aria-label="Photo 1"><div class="forged"></div></button>
+          <button class="thumb" aria-label="Photo 2"><div class="forged"></div></button>
+          <button class="thumb" aria-label="Photo 3"><div class="forged"></div></button>
+        </div>
+      </div>
       <div class="caption">
         <div class="no">No. 01 — Motorcycle</div>
         <h2>CP3 Oil Pump Cover</h2>
         <p>A forged carbon cover for the CP3 triple — direct fit for the Yamaha MT&#8209;09 and XSR900. Pressed in a matched mould, finished in gloss or satin, marbled like no other engine on the road.</p>
-        <div class="meta"><span>Price on request</span><a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20CP3%20Oil%20Pump%20Cover">Inquire →</a></div>
+        <div class="meta">
+          <span class="status soon">Coming soon</span>
+          <span class="price">€ —</span>
+          <a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20CP3%20Oil%20Pump%20Cover">Inquire →</a>
+        </div>
       </div>
     </article>
 
     <article class="piece alt">
-      <div class="plate"><div class="forged"></div><span class="tag">Render coming soon</span></div>
+      <div class="gallery">
+        <div class="plate"><div class="forged"></div><span class="tag">Photos coming soon</span></div>
+        <div class="thumbs">
+          <button class="thumb active" aria-label="Photo 1"><div class="forged"></div></button>
+          <button class="thumb" aria-label="Photo 2"><div class="forged"></div></button>
+          <button class="thumb" aria-label="Photo 3"><div class="forged"></div></button>
+        </div>
+      </div>
       <div class="caption">
         <div class="no">No. 02 — Desk</div>
         <h2>Keyboard Frame</h2>
         <p>A forged carbon frame for your mechanical keyboard — rigid, featherweight, and hand-polished. The marbling makes the centrepiece of your desk one of one.</p>
-        <div class="meta"><span>Price on request</span><a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20Keyboard%20Frame">Inquire →</a></div>
+        <div class="meta">
+          <span class="status soon">Coming soon</span>
+          <span class="price">€ —</span>
+          <a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20Keyboard%20Frame">Inquire →</a>
+        </div>
       </div>
     </article>
 
     <article class="piece">
-      <div class="plate"><div class="forged"></div><span class="tag">Render coming soon</span></div>
+      <div class="gallery">
+        <div class="plate"><div class="forged"></div><span class="tag">Photos coming soon</span></div>
+        <div class="thumbs">
+          <button class="thumb active" aria-label="Photo 1"><div class="forged"></div></button>
+          <button class="thumb" aria-label="Photo 2"><div class="forged"></div></button>
+          <button class="thumb" aria-label="Photo 3"><div class="forged"></div></button>
+        </div>
+      </div>
       <div class="caption">
         <div class="no">No. 03 — Jewellery</div>
         <h2>Rings &amp; Jewellery</h2>
         <p>Rings turned from solid forged carbon and sized to you — pendants and earrings on request. Featherweight, and the marbling catches light like polished dark stone.</p>
-        <div class="meta"><span>Price on request</span><a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20Rings%20%26%20Jewellery">Inquire →</a></div>
+        <div class="meta">
+          <span class="status soon">Coming soon</span>
+          <span class="price">€ —</span>
+          <a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20Rings%20%26%20Jewellery">Inquire →</a>
+        </div>
       </div>
     </article>
   </div>
@@ -93,9 +137,23 @@
 <footer>
   <div class="wrap row">
     <div>© <span id="y"></span> SzekSonic s.r.o.</div>
-    <div>Handmade in Hluk · Czech Republic</div>
+    <div>Forged carbon · Made to order</div>
   </div>
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelectorAll('.gallery').forEach(function(g){
+  var plate=g.querySelector('.plate');
+  g.querySelectorAll('.thumb').forEach(function(t){
+    t.addEventListener('click',function(){
+      var from=t.querySelector('img,.forged');
+      var to=plate.querySelector('img,.forged');
+      if(from&&to){plate.replaceChild(from.cloneNode(true),to);}
+      g.querySelectorAll('.thumb').forEach(function(x){x.classList.remove('active');});
+      t.classList.add('active');
+    });
+  });
+});
+</script>
 </body>
 </html>
