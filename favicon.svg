@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0a0d10"/>
-  <path d="M11 24 L18 8 H22 L15 24 Z" fill="#ff4d2e"/>
-  <path d="M8 19 L24 12 L24 15.5 L10 22 Z" fill="#e8eef2"/>
-  <circle cx="24" cy="10" r="2" fill="#ff4d2e"/>
+  <rect width="32" height="32" rx="6" fill="#f7f4ef"/>
+  <rect x="6" y="5" width="20" height="18" fill="#0d1013"/>
+  <g fill="#4a515b">
+    <path d="M8 8 L14 7 L12 10 L8 11 Z"/>
+    <path d="M17 6 L23 8 L20 10 L16 9 Z"/>
+    <path d="M9 14 L15 12 L18 15 L11 17 Z"/>
+    <path d="M19 13 L24 12 L23 16 L20 17 Z"/>
+    <path d="M8 19 L12 18 L14 21 L9 22 Z"/>
+    <path d="M16 19 L22 18 L24 21 L18 22 Z"/>
+  </g>
+  <rect x="6" y="26" width="20" height="1.6" fill="#c34a2a"/>
 </svg>
