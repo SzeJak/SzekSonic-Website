@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="SzekSonic forged carbon CP3 oil pump cover">
+  
+  <defs>
+    <filter id="fk0" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.032" numOctaves="5" seed="21" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.133  0 0 0 0 0.153  0 0 0 0 0.180  1.9 1.9 1.9 0 -2.25" result="col"/>
+      <feComponentTransfer in="col" result="flake"><feFuncA type="discrete" tableValues="0 0 0.6 1"/></feComponentTransfer>
+    </filter>
+    <filter id="fk1" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.007 0.022" numOctaves="4" seed="93" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.204  0 0 0 0 0.227  0 0 0 0 0.259  2.2 2.2 2.2 0 -3.05" result="col"/>
+      <feComponentTransfer in="col" result="flake"><feFuncA type="discrete" tableValues="0 0 0 0 0.85 1"/></feComponentTransfer>
+    </filter>
+    <filter id="fk2" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.044" numOctaves="5" seed="33" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.173  0 0 0 0 0.196  0 0 0 0 0.224  2 2 2 0 -2.5" result="col"/>
+      <feComponentTransfer in="col" result="flake"><feFuncA type="discrete" tableValues="0 0 0 0.7 1"/></feComponentTransfer>
+    </filter>
+    <filter id="fk3" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.056" numOctaves="5" seed="45" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.224  0 0 0 0 0.251  0 0 0 0 0.282  2.1 2.1 2.1 0 -2.75" result="col"/>
+      <feComponentTransfer in="col" result="flake"><feFuncA type="discrete" tableValues="0 0 0 0.7 1"/></feComponentTransfer>
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.45" numOctaves="1" seed="146" result="sn"/>
+      <feColorMatrix in="sn" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.5 0 0 0 0.6" result="st"/>
+      <feComposite in="flake" in2="st" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    </filter>
+    <filter id="fk4" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016 0.05" numOctaves="5" seed="57" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.278  0 0 0 0 0.306  0 0 0 0 0.341  2.2 2.2 2.2 0 -2.95" result="col"/>
+      <feComponentTransfer in="col" result="flake"><feFuncA type="discrete" tableValues="0 0 0 0 0.75 1"/></feComponentTransfer>
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.45" numOctaves="1" seed="158" result="sn"/>
+      <feColorMatrix in="sn" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.5 0 0 0 0.6" result="st"/>
+      <feComposite in="flake" in2="st" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    </filter>
+    <filter id="fk5" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.026 0.07" numOctaves="5" seed="69" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.337  0 0 0 0 0.365  0 0 0 0 0.400  2.3 2.3 2.3 0 -3.25" result="col"/>
+      <feComponentTransfer in="col" result="flake"><feFuncA type="discrete" tableValues="0 0 0 0 0.8 1"/></feComponentTransfer>
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.45" numOctaves="1" seed="170" result="sn"/>
+      <feColorMatrix in="sn" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.5 0 0 0 0.6" result="st"/>
+      <feComposite in="flake" in2="st" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    </filter>
+    <filter id="fk6" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03 0.08" numOctaves="5" seed="81" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.420  0 0 0 0 0.451  0 0 0 0 0.486  2.4 2.4 2.4 0 -3.52" result="col"/>
+      <feComponentTransfer in="col" result="flake"><feFuncA type="discrete" tableValues="0 0 0 0 0 0.8 1"/></feComponentTransfer>
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.45" numOctaves="1" seed="182" result="sn"/>
+      <feColorMatrix in="sn" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.5 0 0 0 0.6" result="st"/>
+      <feComposite in="flake" in2="st" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    </filter>
+    <filter id="fkEdge" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.16 0.16" numOctaves="2" seed="19"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.24  0 0 0 0 0.26  0 0 0 0 0.29  1.4 1.4 1.4 0 -1.7"/>
+      <feComponentTransfer><feFuncA type="discrete" tableValues="0 0 0.35 0.7"/></feComponentTransfer>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.5  0 0 0 0 0.52  0 0 0 0 0.55  0.4 0.4 0.4 0 -0.45"/>
+    </filter>
+    <filter id="blurShadow" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="blurContact" x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="blurSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blurFine" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <filter id="blurRefl" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.5"/></filter>
+
+    <clipPath id="topFace"><ellipse cx="500" cy="486" rx="352" ry="239.36" /></clipPath>
+    <clipPath id="domeClip"><ellipse cx="500" cy="486" rx="242.88" ry="165.16" /></clipPath>
+    <clipPath id="sideWall"><path d="M 148 486 A 352 239.36 0 0 0 852 486 L 852 530 A 352 239.36 0 0 1 148 530 Z"/></clipPath>
+
+    <!-- base plate tone: a hair lighter toward the light -->
+    <linearGradient id="plateBase" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#13171c"/>
+      <stop offset="1" stop-color="#0c0f12"/>
+    </linearGradient>
+    <!-- flat rim: broad softbox reflection from the upper left, falling off to the lower right -->
+    <radialGradient id="rimLight" cx="0.28" cy="0.16" r="1.0" fx="0.24" fy="0.10">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.11"/>
+      <stop offset="0.30" stop-color="#fff" stop-opacity="0.03"/>
+      <stop offset="0.62" stop-color="#000" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.48"/>
+    </radialGradient>
+    <!-- dome: bright toward the key light, darkening into the far edge -->
+    <radialGradient id="domeLight" cx="0.38" cy="0.26" r="0.82" fx="0.33" fy="0.19">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.36"/>
+      <stop offset="0.26" stop-color="#fff" stop-opacity="0.13"/>
+      <stop offset="0.52" stop-color="#000" stop-opacity="0.0"/>
+      <stop offset="0.78" stop-color="#000" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.74"/>
+    </radialGradient>
+    <!-- fillet where dome meets rim: lit on the upper left, in shadow on the lower right -->
+    <linearGradient id="filletGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.50"/>
+      <stop offset="0.42" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="0.58" stop-color="#000" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="domeShadowGrad" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0.38" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.72"/>
+    </linearGradient>
+    <!-- outer chamfer: a machined bevel catching the top light -->
+    <linearGradient id="chamferGrad" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.70"/>
+      <stop offset="0.28" stop-color="#fff" stop-opacity="0.26"/>
+      <stop offset="0.58" stop-color="#fff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="edgeSpec" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.95"/>
+      <stop offset="0.28" stop-color="#fff" stop-opacity="0.32"/>
+      <stop offset="0.52" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.86" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.30"/>
+    </linearGradient>
+    <!-- side wall: machined edge, lit from the left, falling into shadow on the right -->
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1e2228"/>
+      <stop offset="0.22" stop-color="#2e333b"/>
+      <stop offset="0.52" stop-color="#1c2026"/>
+      <stop offset="0.82" stop-color="#101316"/>
+      <stop offset="1" stop-color="#171a1f"/>
+    </linearGradient>
+    <linearGradient id="wallAO" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.50"/>
+      <stop offset="0.30" stop-color="#000" stop-opacity="0.06"/>
+      <stop offset="0.78" stop-color="#000" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.38"/>
+    </linearGradient>
+    <linearGradient id="wallRim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.65" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.18"/>
+    </linearGradient>
+    <!-- bolt heads: black-oxide socket head cap screws -->
+    <radialGradient id="boltHead" cx="0.36" cy="0.30" r="0.75">
+      <stop offset="0" stop-color="#8f959e"/>
+      <stop offset="0.42" stop-color="#4f555d"/>
+      <stop offset="0.85" stop-color="#23272c"/>
+      <stop offset="1" stop-color="#15181c"/>
+    </radialGradient>
+    <linearGradient id="boreWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4c525a"/>
+      <stop offset="0.45" stop-color="#1a1d22"/>
+      <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+    <linearGradient id="boreLip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="socketGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#030405"/>
+      <stop offset="0.7" stop-color="#101317"/>
+      <stop offset="1" stop-color="#2b3036"/>
+    </linearGradient>
+    <linearGradient id="headEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.6"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.0"/>
+    </linearGradient>
+    <!-- softbox reflection on the clear coat -->
+    <radialGradient id="softbox" cx="0.5" cy="0.5" r="0.58">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.44"/>
+      <stop offset="0.45" stop-color="#fff" stop-opacity="0.34"/>
+      <stop offset="0.8" stop-color="#fff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- glossy floor reflection fade (dark background) -->
+    <linearGradient id="reflFade" x1="0" y1="530" x2="0" y2="680" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.34"/>
+      <stop offset="0.35" stop-color="#fff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="reflMask"><rect x="0" y="530" width="1000" height="200" fill="url(#reflFade)"/></mask>
+  </defs>
+  
+  
+  <g>
+    <ellipse cx="500" cy="562" rx="380.16" ry="100.53" fill="#000" opacity="0.34" filter="url(#blurShadow)"/>
+    <ellipse cx="500" cy="540" rx="344.96" ry="40.69" fill="#000" opacity="0.5" filter="url(#blurContact)"/>
+  </g>
+  
+  <g clip-path="url(#sideWall)">
+    <rect width="1000" height="1000" fill="url(#wallGrad)"/>
+    <rect x="128" y="246.64" width="744" height="542.72" filter="url(#fkEdge)" opacity="0.5"/>
+    <rect width="1000" height="1000" fill="url(#wallAO)"/>
+    <path d="M 148 486 A 352 239.36 0 0 0 852 486 L 852 530 A 352 239.36 0 0 1 148 530 Z" fill="url(#wallRim)"/>
+  </g>
+  <path d="M 148 530 A 352 239.36 0 0 0 852 530" fill="none" stroke="#fff" stroke-opacity="0.2" stroke-width="1.2"/>
+  
+  <g clip-path="url(#topFace)">
+    <rect width="1000" height="1000" fill="url(#plateBase)"/>
+    <g transform="translate(500 486) scale(1 0.68)">
+      <g transform="rotate(-70)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#fk0)" opacity="1"/></g>
+      <g transform="rotate(150)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#fk1)" opacity="1"/></g>
+      <g transform="rotate(-35)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#fk2)" opacity="1"/></g>
+      <g transform="rotate(-5)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#fk3)" opacity="1"/></g>
+      <g transform="rotate(25)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#fk4)" opacity="1"/></g>
+      <g transform="rotate(55)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#fk5)" opacity="1"/></g>
+      <g transform="rotate(112)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#fk6)" opacity="1"/></g>
+      <g transform="rotate(0)"><rect x="-750" y="-750" width="1500" height="1500" filter="url(#grain)" opacity="0.2"/></g>
+    </g>
+    <ellipse cx="500" cy="486" rx="352" ry="239.36" fill="url(#rimLight)"/>
+    <!-- shadow cast by the dome onto the rim (lower right) -->
+    <ellipse cx="506" cy="495" rx="253.44" ry="172.34" fill="none" stroke="url(#domeShadowGrad)" stroke-width="28" filter="url(#blurSoft)"/>
+    <!-- domed centre -->
+    <g clip-path="url(#domeClip)">
+      <ellipse cx="500" cy="486" rx="242.88" ry="165.16" fill="url(#domeLight)"/>
+      <path d="M 417.61 450.99 A 97.15 66.06 0 0 1 520.2 421.38" fill="none" stroke="url(#softbox)" stroke-width="40.69" stroke-linecap="round" opacity="1" filter="url(#blurFine)"/><path d="M 422.24 490.13 A 126.3 85.88 0 0 1 482.42 472.76" fill="none" stroke="url(#softbox)" stroke-width="13.16" stroke-linecap="round" opacity="0.35" filter="url(#blurFine)"/>
+    </g>
+    <!-- fillet between dome and rim -->
+    <ellipse cx="500" cy="486" rx="242.88" ry="165.16" fill="none" stroke="url(#filletGrad)" stroke-width="3.2"/>
+    <ellipse cx="500" cy="486" rx="238.3" ry="162.05" fill="none" stroke="#000" stroke-opacity="0.30" stroke-width="1.1"/>
+    
+    <g>
+      <ellipse cx="500" cy="284.94" rx="27.46" ry="18.67" fill="url(#boreWall)"/>
+      <ellipse cx="500" cy="286.94" rx="25.46" ry="17.17" fill="#07090b"/>
+      <ellipse cx="500" cy="292.44" rx="19.01" ry="12.93" fill="#0a0c0e"/>
+      <ellipse cx="500" cy="289.94" rx="19.01" ry="12.93" fill="url(#boltHead)"/>
+      <ellipse cx="500" cy="289.94" rx="18.01" ry="11.93" fill="none" stroke="url(#headEdge)" stroke-width="1.6"/>
+      <polygon points="508.56,293.3 500,296.66 491.44,293.3 491.44,286.58 500,283.22 508.56,286.58" fill="url(#socketGrad)"/>
+      <polygon points="506.68,294.06 500,296.68 493.32,294.06 493.32,288.82 500,286.2 506.68,288.82" fill="#050608"/>
+      <ellipse cx="500" cy="284.94" rx="27.46" ry="18.67" fill="none" stroke="url(#boreLip)" stroke-width="1.8"/>
+    </g>
+    <g>
+      <ellipse cx="756.07" cy="385.47" rx="27.46" ry="18.67" fill="url(#boreWall)"/>
+      <ellipse cx="756.07" cy="387.47" rx="25.46" ry="17.17" fill="#07090b"/>
+      <ellipse cx="756.07" cy="392.97" rx="19.01" ry="12.93" fill="#0a0c0e"/>
+      <ellipse cx="756.07" cy="390.47" rx="19.01" ry="12.93" fill="url(#boltHead)"/>
+      <ellipse cx="756.07" cy="390.47" rx="18.01" ry="11.93" fill="none" stroke="url(#headEdge)" stroke-width="1.6"/>
+      <polygon points="764.63,393.83 756.07,397.19 747.51,393.83 747.51,387.11 756.07,383.75 764.63,387.11" fill="url(#socketGrad)"/>
+      <polygon points="762.74,394.59 756.07,397.21 749.39,394.59 749.39,389.35 756.07,386.73 762.74,389.35" fill="#050608"/>
+      <ellipse cx="756.07" cy="385.47" rx="27.46" ry="18.67" fill="none" stroke="url(#boreLip)" stroke-width="1.8"/>
+    </g>
+    <g>
+      <ellipse cx="756.07" cy="586.53" rx="27.46" ry="18.67" fill="url(#boreWall)"/>
+      <ellipse cx="756.07" cy="588.53" rx="25.46" ry="17.17" fill="#07090b"/>
+      <ellipse cx="756.07" cy="594.03" rx="19.01" ry="12.93" fill="#0a0c0e"/>
+      <ellipse cx="756.07" cy="591.53" rx="19.01" ry="12.93" fill="url(#boltHead)"/>
+      <ellipse cx="756.07" cy="591.53" rx="18.01" ry="11.93" fill="none" stroke="url(#headEdge)" stroke-width="1.6"/>
+      <polygon points="764.63,594.89 756.07,598.25 747.51,594.89 747.51,588.17 756.07,584.81 764.63,588.17" fill="url(#socketGrad)"/>
+      <polygon points="762.74,595.65 756.07,598.27 749.39,595.65 749.39,590.41 756.07,587.79 762.74,590.41" fill="#050608"/>
+      <ellipse cx="756.07" cy="586.53" rx="27.46" ry="18.67" fill="none" stroke="url(#boreLip)" stroke-width="1.8"/>
+    </g>
+    <g>
+      <ellipse cx="500" cy="687.06" rx="27.46" ry="18.67" fill="url(#boreWall)"/>
+      <ellipse cx="500" cy="689.06" rx="25.46" ry="17.17" fill="#07090b"/>
+      <ellipse cx="500" cy="694.56" rx="19.01" ry="12.93" fill="#0a0c0e"/>
+      <ellipse cx="500" cy="692.06" rx="19.01" ry="12.93" fill="url(#boltHead)"/>
+      <ellipse cx="500" cy="692.06" rx="18.01" ry="11.93" fill="none" stroke="url(#headEdge)" stroke-width="1.6"/>
+      <polygon points="508.56,695.42 500,698.78 491.44,695.42 491.44,688.7 500,685.34 508.56,688.7" fill="url(#socketGrad)"/>
+      <polygon points="506.68,696.18 500,698.8 493.32,696.18 493.32,690.94 500,688.32 506.68,690.94" fill="#050608"/>
+      <ellipse cx="500" cy="687.06" rx="27.46" ry="18.67" fill="none" stroke="url(#boreLip)" stroke-width="1.8"/>
+    </g>
+    <g>
+      <ellipse cx="243.93" cy="586.53" rx="27.46" ry="18.67" fill="url(#boreWall)"/>
+      <ellipse cx="243.93" cy="588.53" rx="25.46" ry="17.17" fill="#07090b"/>
+      <ellipse cx="243.93" cy="594.03" rx="19.01" ry="12.93" fill="#0a0c0e"/>
+      <ellipse cx="243.93" cy="591.53" rx="19.01" ry="12.93" fill="url(#boltHead)"/>
+      <ellipse cx="243.93" cy="591.53" rx="18.01" ry="11.93" fill="none" stroke="url(#headEdge)" stroke-width="1.6"/>
+      <polygon points="252.49,594.89 243.93,598.25 235.37,594.89 235.37,588.17 243.93,584.81 252.49,588.17" fill="url(#socketGrad)"/>
+      <polygon points="250.61,595.65 243.93,598.27 237.26,595.65 237.26,590.41 243.93,587.79 250.61,590.41" fill="#050608"/>
+      <ellipse cx="243.93" cy="586.53" rx="27.46" ry="18.67" fill="none" stroke="url(#boreLip)" stroke-width="1.8"/>
+    </g>
+    <g>
+      <ellipse cx="243.93" cy="385.47" rx="27.46" ry="18.67" fill="url(#boreWall)"/>
+      <ellipse cx="243.93" cy="387.47" rx="25.46" ry="17.17" fill="#07090b"/>
+      <ellipse cx="243.93" cy="392.97" rx="19.01" ry="12.93" fill="#0a0c0e"/>
+      <ellipse cx="243.93" cy="390.47" rx="19.01" ry="12.93" fill="url(#boltHead)"/>
+      <ellipse cx="243.93" cy="390.47" rx="18.01" ry="11.93" fill="none" stroke="url(#headEdge)" stroke-width="1.6"/>
+      <polygon points="252.49,393.83 243.93,397.19 235.37,393.83 235.37,387.11 243.93,383.75 252.49,387.11" fill="url(#socketGrad)"/>
+      <polygon points="250.61,394.59 243.93,397.21 237.26,394.59 237.26,389.35 243.93,386.73 250.61,389.35" fill="#050608"/>
+      <ellipse cx="243.93" cy="385.47" rx="27.46" ry="18.67" fill="none" stroke="url(#boreLip)" stroke-width="1.8"/>
+    </g>
+    <!-- outer chamfer and specular edge -->
+    <ellipse cx="500" cy="486" rx="342.14" ry="232.66" fill="none" stroke="#000" stroke-opacity="0.22" stroke-width="1"/>
+    <ellipse cx="500" cy="486" rx="347.07" ry="236.01" fill="none" stroke="url(#chamferGrad)" stroke-width="9.86"/>
+    <ellipse cx="500" cy="486" rx="352" ry="239.36" fill="none" stroke="url(#edgeSpec)" stroke-width="3"/>
+  </g>
+</svg>

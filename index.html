@@ -1,159 +1,275 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SzekSonic Carbon — Artisan Carbon Fiber</title>
-<meta name="description" content="An atelier for forged carbon fiber — motorcycle parts, accessories, and jewellery. Each piece pressed in the mould with its own marbling, made to order in the Czech Republic.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SzekSonic Carbon</title>
+<meta name="description" content="Forged carbon fiber, made by hand in the Czech Republic. Motorcycle parts, desk objects and jewellery — each pressed in the mould, no two alike.">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.replace('no-js','js')</script>
 </head>
 <body>
 
-<div class="wrap">
-  <nav>
-    <a href="#top" class="brand">SzekSonic <em>Carbon</em></a>
-    <div class="menu">
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="nav-logo" aria-label="SzekSonic Carbon — top of page">
+      <img class="logo-dark" src="img/logo-nav.svg" alt="SzekSonic" width="146" height="20">
+      <img class="logo-light" src="img/logo-nav-white.svg" alt="" width="146" height="20" aria-hidden="true">
+    </a>
+    <nav class="nav-links" aria-label="Sections">
       <a href="#pieces">Pieces</a>
       <a href="#craft">Craft</a>
-      <a href="#order">Order</a>
-    </div>
-  </nav>
-</div>
-
-<header class="hero" id="top">
-  <div class="wrap">
-    <div class="kicker reveal">Atelier · forged carbon fiber</div>
-    <h1 class="reveal d1">Carbon, forged<br>into a <em>craft.</em></h1>
-    <p class="lede reveal d2">We press forged carbon in a small shop in the Czech Republic — parts for motorcycles, objects for every day, jewellery to wear. The fibres flow as the mould closes, so every surface carries its own marbling. Each piece is made to order, and no two are alike.</p>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-sm" href="#contact">Inquire</a>
   </div>
 </header>
 
+<main id="top">
+
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-in">
+    <p class="eyebrow">SzekSonic Carbon · Czech Republic</p>
+    <h1>Forged carbon.<br>Made by hand.</h1>
+    <p class="sub">Motorcycle parts, desk objects and jewellery, each pressed in the mould so that no two surfaces are alike.</p>
+    <div class="actions">
+      <a class="btn btn-light" href="#pieces">See the pieces</a>
+      <a class="link" href="#craft">How it's made<span aria-hidden="true"> ›</span></a>
+    </div>
+  </div>
+</section>
+
 <!--
   EDITING A PIECE
-  · Pictures: put an <img src="img/....jpg" alt="..."> inside .plate (main photo)
-    and inside each .thumb, replacing the <div class="forged"></div> placeholder.
-    Clicking a thumbnail swaps it into the main plate automatically.
-  · Price: put the real price in <span class="price"> (e.g. 129 €).
-  · Status: set the class on <span class="status"> to one of
-    "status soon" (Coming soon) / "status available" (Available to order) /
-    "status sold" (Sold out) and match the text.
+  · Images: swap the src of .stage-img and each .thumb img (SVG, PNG or JPG). Clicking a thumbnail
+    shows it on the stage. Keep images square-ish; the stage reserves a 1:1 box so nothing jumps.
+  · Price: edit <span class="price">.
+  · Status: on <span class="status"> use "status soon" (Coming soon), "status available"
+    (Available to order) or "status sold" (Sold out) and match the text.
 -->
 
-<main id="pieces">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">The pieces</div>
-      <p class="note">Three, so far. More are on the bench.</p>
+<section class="product bg-white" id="pieces">
+  <div class="product-in">
+    <header class="product-head reveal">
+      <p class="eyebrow">Motorcycle · Yamaha MT‑09 and XSR900</p>
+      <h2>CP3 Oil Pump Cover</h2>
+      <p class="claim">The CP3 triple's oil pump cover, pressed in forged carbon.</p>
+    </header>
+    <figure class="stage reveal">
+      <img class="stage-img" src="img/model-cover.svg" alt="CP3 oil pump cover in forged carbon, six bolt heads around a domed centre" width="1000" height="1000">
+    </figure>
+    <div class="thumbs reveal" role="group" aria-label="Views">
+      <button class="thumb is-active" type="button" aria-label="Front view" aria-pressed="true"><img src="img/model-cover.svg" alt="" width="200" height="200"></button>
+      <button class="thumb" type="button" aria-label="Surface detail" aria-pressed="false"><img src="img/forged.svg" alt="" width="200" height="200"></button>
+      <button class="thumb" type="button" aria-label="Second view" aria-pressed="false"><img src="img/model-cover.svg" alt="" width="200" height="200"></button>
     </div>
-
-    <article class="piece">
-      <div class="gallery">
-        <div class="plate"><div class="forged"></div><span class="tag">Photos coming soon</span></div>
-        <div class="thumbs">
-          <button class="thumb active" aria-label="Photo 1"><div class="forged"></div></button>
-          <button class="thumb" aria-label="Photo 2"><div class="forged"></div></button>
-          <button class="thumb" aria-label="Photo 3"><div class="forged"></div></button>
-        </div>
-      </div>
-      <div class="caption">
-        <div class="no">No. 01 — Motorcycle</div>
-        <h2>CP3 Oil Pump Cover</h2>
-        <p>A forged carbon cover for the CP3 triple — direct fit for the Yamaha MT&#8209;09 and XSR900. Pressed in a matched mould, finished in gloss or satin, marbled like no other engine on the road.</p>
-        <div class="meta">
-          <span class="status soon">Coming soon</span>
-          <span class="price">€ —</span>
-          <a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20CP3%20Oil%20Pump%20Cover">Inquire →</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="piece alt">
-      <div class="gallery">
-        <div class="plate"><div class="forged"></div><span class="tag">Photos coming soon</span></div>
-        <div class="thumbs">
-          <button class="thumb active" aria-label="Photo 1"><div class="forged"></div></button>
-          <button class="thumb" aria-label="Photo 2"><div class="forged"></div></button>
-          <button class="thumb" aria-label="Photo 3"><div class="forged"></div></button>
-        </div>
-      </div>
-      <div class="caption">
-        <div class="no">No. 02 — Desk</div>
-        <h2>Keyboard Frame</h2>
-        <p>A forged carbon frame for your mechanical keyboard — rigid, featherweight, and hand-polished. The marbling makes the centrepiece of your desk one of one.</p>
-        <div class="meta">
-          <span class="status soon">Coming soon</span>
-          <span class="price">€ —</span>
-          <a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20Keyboard%20Frame">Inquire →</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="piece">
-      <div class="gallery">
-        <div class="plate"><div class="forged"></div><span class="tag">Photos coming soon</span></div>
-        <div class="thumbs">
-          <button class="thumb active" aria-label="Photo 1"><div class="forged"></div></button>
-          <button class="thumb" aria-label="Photo 2"><div class="forged"></div></button>
-          <button class="thumb" aria-label="Photo 3"><div class="forged"></div></button>
-        </div>
-      </div>
-      <div class="caption">
-        <div class="no">No. 03 — Jewellery</div>
-        <h2>Rings &amp; Jewellery</h2>
-        <p>Rings turned from solid forged carbon and sized to you — pendants and earrings on request. Featherweight, and the marbling catches light like polished dark stone.</p>
-        <div class="meta">
-          <span class="status soon">Coming soon</span>
-          <span class="price">€ —</span>
-          <a href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry%20—%20Rings%20%26%20Jewellery">Inquire →</a>
-        </div>
-      </div>
-    </article>
+    <div class="meta reveal">
+      <span class="status soon">Coming soon</span>
+      <span class="price">From — €</span>
+    </div>
+    <div class="actions reveal">
+      <a class="btn" href="mailto:jakub.szekely@szeksonic.com?subject=Inquiry%20—%20CP3%20Oil%20Pump%20Cover">Inquire</a>
+      <details class="specs">
+        <summary>Details</summary>
+        <ul>
+          <li>Fits the Yamaha CP3 engine: MT‑09 and XSR900</li>
+          <li>Forged carbon, pressed in a matched mould</li>
+          <li>Gloss or satin finish</li>
+          <li>Made to order; lead time on request</li>
+        </ul>
+      </details>
+    </div>
   </div>
+</section>
+
+<section class="product bg-grey" id="keyboard">
+  <div class="product-in">
+    <header class="product-head reveal">
+      <p class="eyebrow">Desk</p>
+      <h2>Keyboard Frame</h2>
+      <p class="claim">A frame for your mechanical keyboard. Rigid, light, and one of one.</p>
+    </header>
+    <figure class="stage reveal">
+      <img class="stage-img" src="img/model-keyboard.svg" alt="Keyboard frame in forged carbon" width="1000" height="1000">
+    </figure>
+    <div class="thumbs reveal" role="group" aria-label="Views">
+      <button class="thumb is-active" type="button" aria-label="Front view" aria-pressed="true"><img src="img/model-keyboard.svg" alt="" width="200" height="200"></button>
+      <button class="thumb" type="button" aria-label="Surface detail" aria-pressed="false"><img src="img/forged.svg" alt="" width="200" height="200"></button>
+      <button class="thumb" type="button" aria-label="Second view" aria-pressed="false"><img src="img/model-keyboard.svg" alt="" width="200" height="200"></button>
+    </div>
+    <div class="meta reveal">
+      <span class="status soon">Coming soon</span>
+      <span class="price">From — €</span>
+    </div>
+    <div class="actions reveal">
+      <a class="btn" href="mailto:jakub.szekely@szeksonic.com?subject=Inquiry%20—%20Keyboard%20Frame">Inquire</a>
+      <details class="specs">
+        <summary>Details</summary>
+        <ul>
+          <li>Forged carbon frame, hand-polished</li>
+          <li>Sized to your keyboard layout on request</li>
+          <li>Gloss or satin finish</li>
+          <li>Made to order; lead time on request</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="product bg-black" id="rings">
+  <div class="product-in">
+    <header class="product-head reveal">
+      <p class="eyebrow">Jewellery</p>
+      <h2>Rings &amp; Jewellery</h2>
+      <p class="claim">Rings turned from solid forged carbon, sized to you. Pendants on request.</p>
+    </header>
+    <figure class="stage reveal">
+      <img class="stage-img" src="img/model-ring.svg" alt="Forged carbon ring" width="1000" height="1000">
+    </figure>
+    <div class="thumbs reveal" role="group" aria-label="Views">
+      <button class="thumb is-active" type="button" aria-label="Front view" aria-pressed="true"><img src="img/model-ring.svg" alt="" width="200" height="200"></button>
+      <button class="thumb" type="button" aria-label="Surface detail" aria-pressed="false"><img src="img/forged.svg" alt="" width="200" height="200"></button>
+      <button class="thumb" type="button" aria-label="Second view" aria-pressed="false"><img src="img/model-ring.svg" alt="" width="200" height="200"></button>
+    </div>
+    <div class="meta reveal">
+      <span class="status soon">Coming soon</span>
+      <span class="price">From — €</span>
+    </div>
+    <div class="actions reveal">
+      <a class="btn btn-light" href="mailto:jakub.szekely@szeksonic.com?subject=Inquiry%20—%20Rings%20%26%20Jewellery">Inquire</a>
+      <details class="specs">
+        <summary>Details</summary>
+        <ul>
+          <li>Solid forged carbon, turned and polished</li>
+          <li>Sized to order; pendants and earrings on request</li>
+          <li>Gloss or satin finish</li>
+          <li>Made to order; lead time on request</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="craft bg-white" id="craft">
+  <div class="craft-in">
+    <header class="reveal">
+      <p class="eyebrow">Craft</p>
+      <h2>Pressed, not woven.</h2>
+    </header>
+    <div class="craft-grid">
+      <div class="craft-item reveal">
+        <h3>Chopped tow, not cloth</h3>
+        <p>Forged carbon starts as short strands of carbon fibre laid into the mould by hand, not a woven sheet.</p>
+      </div>
+      <div class="craft-item reveal">
+        <h3>Pressed under heat</h3>
+        <p>As the mould closes the fibres flow into every edge. That flow is what leaves the marbling.</p>
+      </div>
+      <div class="craft-item reveal">
+        <h3>Finished by hand</h3>
+        <p>Each piece is trimmed, wet-sanded and polished in our shop in the Czech Republic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="material" aria-label="Material">
+  <div class="material-bg" aria-hidden="true"></div>
+  <p class="material-cap reveal">Every surface is one of one.</p>
+</section>
+
+<section class="contact bg-grey" id="contact">
+  <div class="contact-in">
+    <header class="reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Made to order.</h2>
+      <p class="claim">Tell us what you ride, what's on your desk, or what you'd like to wear. We reply with options, lead time and a quote.</p>
+    </header>
+    <div class="card-wrap reveal">
+      <button class="card" id="card" type="button" aria-pressed="false" aria-label="Contact card. Activate to flip.">
+        <span class="card-face card-front">
+          <span class="card-sheen" aria-hidden="true"></span>
+          <img src="img/logo-mark-white.svg" alt="" width="44" height="44">
+          <span class="card-name">SzekSonic s.r.o.</span>
+          <span class="card-line">Forged carbon · Czech Republic</span>
+        </span>
+        <span class="card-face card-back">
+          <img src="img/logo-mark.svg" alt="" width="36" height="36">
+          <span class="card-email" id="email">jakub.szekely@szeksonic.com</span>
+          <span class="card-line">Orders and commissions</span>
+        </span>
+      </button>
+      <div class="card-actions">
+        <a class="btn" href="mailto:jakub.szekely@szeksonic.com?subject=Inquiry">Email</a>
+        <button class="btn btn-ghost" id="copy" type="button">Copy email</button>
+        <button class="btn btn-ghost" id="vcard" type="button">Save contact</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<section id="craft">
-  <div class="wrap">
-    <div class="craft">
-      <div class="kicker">The craft</div>
-      <p class="big">Every piece begins as chopped carbon tow, laid into the mould by hand and pressed under heat. The fibres flow where the mould takes them, then the piece is trimmed, wet-sanded, and polished until the marbling reads like stone under glass.</p>
-      <p class="note">Gloss or satin finish · every pattern one of a kind · custom shapes and one-off commissions welcome.</p>
-    </div>
-  </div>
-</section>
-
-<section id="order">
-  <div class="wrap">
-    <div class="kicker">Order</div>
-    <h2 class="order-h">Made for you, when you ask.</h2>
-    <p>Tell us what you ride, what's on your desk, or what you'd like to wear — we'll reply with options, lead time, and a quote.</p>
-    <a class="email" href="mailto:jakub.szekely@szeksonic.com?subject=Order%20inquiry">jakub.szekely@szeksonic.com →</a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap row">
-    <div>© <span id="y"></span> SzekSonic s.r.o.</div>
-    <div>Forged carbon · Made to order</div>
+<footer class="foot">
+  <div class="foot-in">
+    <img src="img/logo-mark.svg" alt="SzekSonic" width="28" height="28">
+    <p>© <span id="y"></span> SzekSonic s.r.o.</p>
+    <a href="mailto:jakub.szekely@szeksonic.com">jakub.szekely@szeksonic.com</a>
   </div>
 </footer>
+
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
-document.querySelectorAll('.gallery').forEach(function(g){
-  var plate=g.querySelector('.plate');
-  g.querySelectorAll('.thumb').forEach(function(t){
-    t.addEventListener('click',function(){
-      var from=t.querySelector('img,.forged');
-      var to=plate.querySelector('img,.forged');
-      if(from&&to){plate.replaceChild(from.cloneNode(true),to);}
-      g.querySelectorAll('.thumb').forEach(function(x){x.classList.remove('active');});
-      t.classList.add('active');
+(function(){
+  var d=document, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.getElementById('y').textContent=new Date().getFullYear();
+
+  // nav: white over dark hero, then light glass once the hero is scrolled away
+  var nav=d.getElementById('nav'), hero=d.getElementById('hero');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){nav.classList.toggle('on-dark',e[0].isIntersecting&&e[0].intersectionRatio>0.08)},{threshold:[0,0.08,0.2]}).observe(hero);
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    d.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }else{nav.classList.add('on-dark');d.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+
+  // thumbnails swap onto the stage
+  d.querySelectorAll('.product').forEach(function(p){
+    var stage=p.querySelector('.stage-img');
+    p.querySelectorAll('.thumb').forEach(function(t){
+      t.addEventListener('click',function(){
+        var img=t.querySelector('img'); if(!img) return;
+        stage.src=img.getAttribute('src');
+        p.querySelectorAll('.thumb').forEach(function(x){x.classList.remove('is-active');x.setAttribute('aria-pressed','false')});
+        t.classList.add('is-active');t.setAttribute('aria-pressed','true');
+      });
     });
   });
-});
+
+  // contact card: flip on activate, tilt on fine pointer, copy and vCard actions
+  var card=d.getElementById('card'), email=d.getElementById('email').textContent.trim();
+  card.addEventListener('click',function(){var on=card.getAttribute('aria-pressed')!=='true';card.setAttribute('aria-pressed',on);card.classList.toggle('is-flipped',on)});
+  if(!reduce&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+    card.addEventListener('pointermove',function(ev){
+      var r=card.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width,y=(ev.clientY-r.top)/r.height;
+      card.style.setProperty('--rx',((0.5-y)*10).toFixed(2)+'deg');card.style.setProperty('--ry',((x-0.5)*14).toFixed(2)+'deg');
+      card.style.setProperty('--mx',(x*100).toFixed(1)+'%');card.style.setProperty('--my',(y*100).toFixed(1)+'%');
+    });
+    card.addEventListener('pointerleave',function(){card.style.setProperty('--rx','0deg');card.style.setProperty('--ry','0deg')});
+  }
+  var copy=d.getElementById('copy');
+  copy.addEventListener('click',function(){
+    var done=function(){copy.textContent='Copied';setTimeout(function(){copy.textContent='Copy email'},1600)};
+    var fallback=function(){var s=window.getSelection(),r=d.createRange();r.selectNodeContents(d.getElementById('email'));s.removeAllRanges();s.addRange(r);if(!card.classList.contains('is-flipped'))card.click()};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(email).then(done,fallback)}else{fallback()}
+  });
+  d.getElementById('vcard').addEventListener('click',function(){
+    var v='BEGIN:VCARD\r\nVERSION:3.0\r\nN:;;;;\r\nFN:SzekSonic s.r.o.\r\nORG:SzekSonic s.r.o.\r\nEMAIL;TYPE=INTERNET,WORK:'+email+'\r\nNOTE:Forged carbon fiber, made by hand in the Czech Republic.\r\nEND:VCARD\r\n';
+    var blob=new Blob([v],{type:'text/vcard'}),url=URL.createObjectURL(blob),a=d.createElement('a');
+    a.href=url;a.download='SzekSonic.vcf';d.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(url);a.remove()},1000);
+  });
+})();
 </script>
 </body>
 </html>
